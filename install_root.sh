@@ -7,8 +7,10 @@ git clone https://github.com/longld/peda.git /opt/peda
 git clone https://github.com/longld/peda.git /opt/gef
 
 chmod +x /opt/pwndbg/setup.sh
+cd /opt/pwndbg
 /opt/pwndbg/setup.sh
 
+rm ~/.gdbinit
 cat <<EOT >> ~/.gdbinit
 
 define init-peda
@@ -52,5 +54,3 @@ EOT
 chmod +x /usr/bin/peda
 chmod +x /usr/bin/pwndbg
 chmod +x /usr/bin/gef
-
-echo ""INSTALLED!!!!"
